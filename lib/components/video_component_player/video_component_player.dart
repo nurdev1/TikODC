@@ -2,7 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoComponentPlayer extends StatefulWidget {
-  const VideoComponentPlayer({Key? key}) : super(key: key);
+
+  final String media;
+  const VideoComponentPlayer(
+  {Key? key,
+    required this.media,}) : super(key: key);
 
   @override
   State<VideoComponentPlayer> createState() => _VideoComponentPlayerState();
@@ -16,7 +20,7 @@ class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
     super.initState();
 
     _controller = VideoPlayerController.asset(
-      'assets/videos/Alahuma.mp4',)
+      widget.media,)
       ..initialize().then((_) {
         setState(() {});
 
