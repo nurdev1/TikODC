@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tikodc/tikodc/Home.dart';
 
 void main() {
@@ -13,6 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'TicODC',
+     theme: ThemeData(
+       textTheme: GoogleFonts.notoSansAdlamTextTheme(
+         Theme.of(context).textTheme,
+       )
+     ),
      debugShowCheckedModeBanner: false,
       home: const Home(),
     );
