@@ -29,7 +29,7 @@ class FeedComponent extends StatelessWidget {
           right: 20.0,
           child: SideBarCompnent(item:item),
         ),
-        EnteteComponent()
+        EnteteWidget()
       ],
     );
   }

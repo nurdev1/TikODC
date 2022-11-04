@@ -76,6 +76,15 @@ flutter:
    - assets/images/c.jpg
    - assets/images/d.jpg
    - assets/images/e.jpg
+   - assets/icones/now.png
+   - assets/icones/add.png
+   - assets/icones/com.png
+   - assets/icones/favo.png
+   - assets/icones/mess.png
+   - assets/icones/send.png
+   - assets/icones/home.png
+   - assets/icones/per.png
+   - assets/icones/tiktok.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

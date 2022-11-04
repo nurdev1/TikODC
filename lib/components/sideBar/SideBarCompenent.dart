@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:tikodc/components/widget/Avatar_widget.dart';
 import 'package:tikodc/components/widget/Comment_widget.dart';
+import 'package:tikodc/components/widget/Musique.dart';
+import 'package:tikodc/components/widget/Share.dart';
+import 'package:tikodc/components/widget/favotite.dart';
 import 'package:tikodc/components/widget/like_widget.dart';
 
 class SideBarCompnent
@@ -32,13 +35,28 @@ class SideBarCompnent
           ),
         ),
         Padding(padding: EdgeInsets.only(
-            bottom: 20.0,
         ),
           child: CommentWidget(
             count:item['likeComment'],
             onPressed: ()  => print("comment"),
           ),
         ),
+        Padding(padding: EdgeInsets.only(
+        ),
+          child: FavoriteWidget(
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(
+        ),
+          child: ShareWidget(
+          ),
+        ),
+        Padding(padding: EdgeInsets.only(
+        ),
+          child: MusiqueWidget(
+          ),
+        ),
+
 
       ],
     );

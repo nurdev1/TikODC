@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tikodc/tikodc/ConnexionAfterClik.dart';
+import 'package:tikodc/tikodc/Coonexion.dart';
 import 'package:tikodc/tikodc/Home.dart';
+import 'package:tikodc/tikodc/Inscription.dart';
+import 'package:tikodc/tikodc/MotDePasse.dart';
+import 'package:tikodc/tikodc/MotDePasseAfterClik.dart';
+import 'package:tikodc/tikodc/TikODC.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +26,7 @@ class MyApp extends StatelessWidget {
        )
      ),
      debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: const MotDePasseAfterClik(),
     );
   }
 }

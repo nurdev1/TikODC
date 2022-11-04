@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class EnteteComponent extends StatelessWidget {
-  const EnteteComponent({Key? key}) : super(key: key);
+class EnteteWidget extends StatelessWidget {
+  const EnteteWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,18 @@ class EnteteComponent extends StatelessWidget {
     fontWeight: FontWeight.w600,
     ),
     ),
+
     ],
     ),
         )
       ],
+
     );
+    /*icon: const Icon(
+        Icons.favorite,
+          color: Colors.white54,
+          fontWeight: FontWeight.w600,
+
+      ),*/
   }
 }

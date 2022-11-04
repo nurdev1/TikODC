@@ -59,30 +59,37 @@ class Home extends StatelessWidget {
         );
       }).toList(),
     ),
+        /*currentIndex: 2,
+            onTap: ((value) {
+            print(value);
+            },*/
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-         /* currentIndex: 2,
-          onTap: ((value) {
-            print(value);*/
-          unselectedItemColor: Colors.pink,
-          selectedItemColor: Colors.black87,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home),
+         unselectedItemColor: Colors.blue,
+         selectedItemColor: Colors.black87,
+         // showSelectedLabels: false,
+         // showUnselectedLabels: false,
+          items:  [
+          BottomNavigationBarItem(icon: Image.asset('assets/icones/home.png',
+            width:27.52, height:35.95, color: Colors.blue,),
           label: "Accueil",
           ),
-         BottomNavigationBarItem(icon: Icon(Icons.account_circle_sharp),
-          label: "Now",
+            BottomNavigationBarItem( icon: Image.asset('assets/icones/now.png',
+                width:27.52, height:35.95, color: Colors.black,
+              ),
+              label: 'Add',
             ),
-        BottomNavigationBarItem(icon: Icon(Icons.add_circle_outline_outlined),
+        BottomNavigationBarItem(icon: Image.asset('assets/icones/add.png',
+          width:27.52, height:35.95, color: Colors.black,),
           label: "add",
           ),
-         BottomNavigationBarItem(icon: Icon(Icons.comment_outlined),
-         label: "Boite de reception",
+         BottomNavigationBarItem(icon: Image.asset('assets/icones/mess.png',
+           width:27.52, height:35.95, color: Colors.black,),
+         label: "Boite de réception",
            ),
-        BottomNavigationBarItem(icon: Icon(Icons.person_outline),
+        BottomNavigationBarItem(icon: Image.asset('assets/icones/per.png',
+          width:27.52, height:35.95, color: Colors.blue,),
         label: "Profil",
           ),
 

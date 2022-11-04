@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FavoriteWidget extends StatelessWidget {
+class MusiqueWidget extends StatelessWidget {
 
   final Function()? onPressed;
-  const FavoriteWidget({Key? key,this.onPressed}) : super(key: key);
+  const MusiqueWidget({Key? key, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class FavoriteWidget extends StatelessWidget {
         child: IconButton(
           onPressed:onPressed,
           icon: const Icon(
-            Icons.casino_rounded,
+            Icons.music_note,
             color: Colors.white,
             size:25.0,
           ),

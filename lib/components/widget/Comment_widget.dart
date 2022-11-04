@@ -32,7 +32,7 @@ class CommentWidget extends StatelessWidget {
                   child: IconButton(
                     onPressed: onPressed,
                     icon: const Icon(
-                      Icons.comment_rounded,
+                      Icons.comment,
                       color: Colors.white,
                       size:25.0,
                     ),
