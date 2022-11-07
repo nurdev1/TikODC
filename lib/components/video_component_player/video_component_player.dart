@@ -27,10 +27,10 @@ class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
     )..initialize().then((_) {
         setState(() {});
 
-       _controller.play();
+      // _controller.play();
       });
 
-  //  _controller.setLooping(true);
+    _controller.setLooping(true);
   }
 
   @override
@@ -41,16 +41,22 @@ class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
        : Container(),
     );*/
 
-    return Stack(
-      children: [
+    return Stack( children: [
         _controller.value.isInitialized
             ? SizedBox(
-              //  width: _controller.value.size.width,
-              //  height: _controller.value.size.width,
                 child: VideoPlayer(_controller),
               )
             : Container(),
-        //const Positioned(bottom: 90.0, child: VideoPlayerProgressComponent()),
+        const Positioned(
+            bottom: 70.0,
+            left: 0.0,
+            right: 0.0,
+            child: VideoPlayerProgressComponent(progress: .2,
+            //controller.seekTo(Duration(
+              //                 milliseconds:
+              //               (_controller.value.duration.inMilliseconds * position).toInt()));
+            ),
+        ),
       ],
     );
   }

@@ -9,25 +9,45 @@ class MotDePasse extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Padding(padding:
-          EdgeInsets.only(bottom: 100),
-            child: Text("Connexion",
-              style: GoogleFonts.belgrano(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading:
+        IconButton(
+          onPressed: (){},
+          icon: Image.asset("assets/icones/ret.png"),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Connexion",
+              style: GoogleFonts.abel(
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
-                fontSize: 25,
+                fontSize: 30,
+
               ),
             ),
+          ],
+        ),
+        actions: [
+          IconButton(onPressed: (){},
+            icon: Image.asset("assets/icones/que.png"),
           ),
+
+        ],
+
+      ),
+      body: Column(
+        children: [
           Expanded(
             child: SingleChildScrollView(
 
               child: Container(
                 padding: const EdgeInsets.all(20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: 10,),
                     SizedBox(height: 10,),
@@ -49,24 +69,25 @@ class MotDePasse extends StatelessWidget {
                           ),
                           SizedBox(height: 20,),
                           Text('mot de passe oublier ?'),
-                          SizedBox(height: 150,),
 
+                          SizedBox(height: 50,),
                           ElevatedButton(
                               onPressed:() {},
                               style: ElevatedButton.styleFrom(
-                                shape: StadiumBorder(),
-                                backgroundColor: Colors.black12,
+                                shape: new RoundedRectangleBorder(),
+                                backgroundColor: Colors.pinkAccent,
                               ),
                               child: Row(
                                 children: [
                                   SizedBox(width: 20,),
                                   Text('Connexion',
                                     textAlign: TextAlign.center,
-                                    style: GoogleFonts.belgrano(
-                                      color: Colors.red,
+                                    style: GoogleFonts.acme(
+                                      color: Colors.white,
                                       fontSize:18,
                                     ),
                                   ),
+
                                 ],
                               )
                           ),

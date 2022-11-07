@@ -6,6 +6,8 @@ import 'package:tikodc/tikodc/Home.dart';
 import 'package:tikodc/tikodc/Inscription.dart';
 import 'package:tikodc/tikodc/MotDePasse.dart';
 import 'package:tikodc/tikodc/MotDePasseAfterClik.dart';
+import 'package:tikodc/tikodc/OTP.dart';
+import 'package:tikodc/tikodc/OTP1.dart';
 import 'package:tikodc/tikodc/TikODC.dart';
 
 void main() {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
        )
      ),
      debugShowCheckedModeBanner: false,
-      home: const MotDePasseAfterClik(),
+      home: const Home(),
     );
   }
 }

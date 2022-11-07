@@ -11,6 +11,8 @@ const List<Map<String, dynamic>> data = [
     "description": "Un Dua",
     "likeCount":100,
     "likeComment":99,
+    "sedCount":645,
+    "favoCount":554,
   },
   {
     "profile": {"username":"Bintou",
@@ -19,6 +21,8 @@ const List<Map<String, dynamic>> data = [
     "description": "Passez une agréable journée avec Sudais",
     "likeCount":600000,
     "likeComment":12,
+    "sedCount":666,
+    "favoCount":644,
   },
   {
     "profile": {"username":"Fodié", "avatar":"assets/images/e.jpg",},
@@ -26,6 +30,8 @@ const List<Map<String, dynamic>> data = [
     "description": "Al-hamdu li-l-lâhi",
     "likeCount":87,
     "likeComment":80,
+    "sedCount":66,
+    "favoCount":764,
   },
   {
     "profile": {"username":"Aïchat",
@@ -34,6 +40,8 @@ const List<Map<String, dynamic>> data = [
     "description": "Demande du pardon du Tout Puissant",
     "likeCount":1700,
     "likeComment":99,
+    "sedCount":667,
+    "favoCount":455,
   },
   {
     "profile": {"username":"Hawa",
@@ -42,6 +50,8 @@ const List<Map<String, dynamic>> data = [
     "description": "Salutation à tous les musulmans",
     "likeCount":149000,
     "likeComment":80,
+    "sedCount":699,
+    "favoCount":664,
   }
 ];
 
@@ -63,8 +73,9 @@ class Home extends StatelessWidget {
             onTap: ((value) {
             print(value);
             },*/
+
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.black,
           elevation: 0,
          unselectedItemColor: Colors.blue,
          selectedItemColor: Colors.black87,

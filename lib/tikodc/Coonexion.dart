@@ -11,150 +11,183 @@ class Connexion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body:SingleChildScrollView(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        actions: [
+          IconButton(onPressed: (){},
+            icon: Image.asset("assets/icones/que.png"),
+          ),
+        ],
+      ),
+      body:
+      Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            AnimationPage(
-                delais: 1,
-                child: Container(
-              height: 200,
-              child: Container(
-                margin: const EdgeInsets.symmetric(
-                  vertical:40,
-                  horizontal:30,
+              Text("Connecte-toi à TikODC",
+                style: GoogleFonts.poppins(
+                  color: Colors.black,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600,
                 ),
-                child: Column(
-                  children: [
-                    Text("Connecte-toi à TikODC",
-                      style: GoogleFonts.poppins(
+              ),
+            SizedBox(height: 5,),
+
+              Text("Gère ton compte, consulte les notifications, commente des vidéo et bien plus encore",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  color: Colors.black26,
+                  fontSize: 16,
+                ),
+              ),
+              SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed:() {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.all(13),
+                  ),
+                  child: Row(
+                    children: [
+                      IconButton(onPressed: (){},
+                        icon: Image.asset("assets/icones/per.png",color: Colors.black,),
+                      ),
+                      SizedBox(width: 5,),
+                      Text('Utiliser téléphone/e-mail/nom d’utilisateur'
+                        ,style: TextStyle(
                         color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
+                          fontSize: 13,
                       ),
-                    ),
-                    SizedBox(height: 30,),
-                    Text("Géère ton compte, consulte les notifications, commente des vidéo et bien plus encore",
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.poppins(
-                        color: Colors.black12,
-                        fontSize: 10,
-                      ),
-                    ),
-                    SizedBox(height: 70,),
-                  ],
-                ),
+
+                      )
+
+                    ],
+                  )
               ),
-            )
             ),
-            AnimationPage(delais: 1,child: Container(
-              margin: const EdgeInsets.symmetric(
-                vertical:14,
-                horizontal:30,
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed:() {},
+                  style: ElevatedButton.styleFrom(
+                    shape: new RoundedRectangleBorder(),
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.all(13),
+                  ),
+                  child: Row(
+                    children: [
+                      IconButton(onPressed: (){},
+                          icon: Image.asset("assets/icones/fac.png"),
+                      ),
+                      SizedBox(width: 30,),
+                      Text('Continuer avec Facebook',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),
+                      ),
+                      SizedBox(height: 10,),
+                    ],
+                  )
               ),
-              child: Column(
-                children: [
-                  ElevatedButton(
-                      onPressed:() {},
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white,
-                        padding: EdgeInsets.all(13),
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.person_rounded,),
-                          SizedBox(width: 20,),
-                          Text('Utiliser téléphone/e-mail/nom d’utilisateur')
-
-                        ],
-                      )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed:() {},
+                  style: ElevatedButton.styleFrom(
+                    shape: new RoundedRectangleBorder(),
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.all(13),
                   ),
-                  SizedBox(height: 20,),
-                  ElevatedButton(
-                      onPressed:() {},
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white,
-                        padding: EdgeInsets.all(13),
+                  child: Row(
+                    children: [
+                      IconButton(onPressed: (){},
+                        icon: Image.asset("assets/icones/gog.png"),
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.facebook,),
-                          SizedBox(width: 20,),
-                          Text('Continuer avec Facebook')
+                      SizedBox(width: 30,),
+                      Text('Continuer avec gmail',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),)
 
-                        ],
-                      )
+                    ],
+                  )
+              ),
+            ),
+            SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                  onPressed:() {},
+                  style: ElevatedButton.styleFrom(
+                    shape: new RoundedRectangleBorder(),
+                    backgroundColor: Colors.white,
+                    padding: EdgeInsets.all(13),
                   ),
-                  SizedBox(height: 20,),
-                  ElevatedButton(
-                      onPressed:() {},
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white,
-                        padding: EdgeInsets.all(13),
+                  child: Row(
+                    children: [
+                      IconButton(onPressed: (){},
+                        icon: Image.asset("assets/icones/tw.png"),
                       ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.gps_fixed_outlined,),
-                          SizedBox(width: 20,),
-                          Text('Continuer avec gmail')
+                      SizedBox(width: 30,),
+                      Text('Continuer avec  Twitter',style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 13,
+                      ),)
 
-                        ],
-                      )
-                  ),
-                  SizedBox(height: 20,),
-                  ElevatedButton(
-                      onPressed:() {},
-                      style: ElevatedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        backgroundColor: Colors.white,
-                        padding: EdgeInsets.all(13),
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.facebook_sharp,),
-                          SizedBox(width: 20,),
-                          Text('Continuer avec  Twitter')
-
-                        ],
-                      )
-                  ),
-                  SizedBox(height: 100,),
-                  Text("En continuant, tu acceptes les conditions d’utilisation et reconnais avoir et lu"
+                    ],
+                  )
+              ),
+            ),
+            SizedBox(height: 5,),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text("En continuant, tu acceptes les conditions d’utilisation et reconnais avoir et lu"
                       " la politique de confidialité pour savoir comment nous collectons, utilisons et partageons tes données.",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.poppins(
-                      color: Colors.black12,
-                      fontSize: 8,
+                    style: GoogleFonts.roboto(
+                      color: Colors.black26,
+                      fontSize: 13,
                     ),
                   ),
-                  SizedBox(height: 110,),
+                ),
+                Container(
+                  child: Row(
 
-                  Text("Tu n’as pas de compte ?",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.belgrano(
-                      color: Colors.black,
-                      fontSize: 18,
-                    ),
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Tu n’as pas de compte ?",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.lato(
+                          color: Colors.black,
+                          fontSize: 18,
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Text("Inscription",
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.lato(
+                          color: Colors.red,
+                          fontSize:18,
+                        ),
+                      ),
+                    ],
                   ),
-                  Text("Inscription",
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.belgrano(
-                      color: Colors.red,
-                      fontSize:18,
-                    ),
-                  ),
-                ],
-//Tu n’as pas de compte ?
-              ),
+                ),
 
-            )
+              ],
             ),
-          ],
 
+          ],
         ),
-      ) ,
+      ),
 
     );
   }

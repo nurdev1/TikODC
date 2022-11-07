@@ -13,34 +13,41 @@ class EnteteWidget extends StatelessWidget {
          padding: const EdgeInsets.only(top: 40),
           child: Row(
     mainAxisAlignment: MainAxisAlignment.center,
-    children: const [
-      Text(
+    children:  [
+      Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Text(
     'Suivis',
     style: TextStyle(
-    color: Colors.white54,
+    color: Colors.white,
+      fontSize: 18,
     fontWeight: FontWeight.w600,
     ),
     ),
+      ),
     SizedBox(width: 20),
-    Text(
-    'Pour toi',
-    style: TextStyle(
-    color: Colors.white54,
-    fontWeight: FontWeight.w600,
+    Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Text(
+      'Pour toi',
+      style: TextStyle(
+      color: Colors.white54,
+      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      ),
+      ),
     ),
-    ),
-
+      Padding(
+        padding: EdgeInsets.all(8.0),
+        child: IconButton(onPressed: (){},
+            icon: Image.asset("assets/icones/cherch.png"),
+      ),
+      ),
     ],
     ),
         )
       ],
 
     );
-    /*icon: const Icon(
-        Icons.favorite,
-          color: Colors.white54,
-          fontWeight: FontWeight.w600,
-
-      ),*/
   }
 }

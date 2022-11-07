@@ -9,82 +9,80 @@ class MotDePasseAfterClik extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Padding(padding: EdgeInsets.only(bottom: 20),
-          child: Text("Réinitialiser",
-            style: GoogleFonts.belgrano(
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
-              fontSize: 25,
-            ),
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading:
+        IconButton(
+          onPressed: (){},
+          icon: Image.asset("assets/icones/ret.png"),
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Réinitialiser",
+              style: GoogleFonts.abel(
+                color: Colors.black,
+                fontWeight: FontWeight.normal,
+                fontSize: 30,
 
               ),
-          Padding(padding: EdgeInsets.only(bottom: 20),
-            child: Text("Saisis ton numéro de téléphone",
-              style: GoogleFonts.belgrano(
+            ),
+          ],
+        ),
+        actions: [
+          IconButton(onPressed: (){},
+            icon: Image.asset("assets/icones/que.png"),
+          ),
+
+        ],
+
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text("Saisis ton numéro de téléphone",
+              style: GoogleFonts.share(
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
                 fontSize: 25,
+              ),),
+            Text("Nous vous enverrons un code sur ton telephone.",
+              style: GoogleFonts.aclonica(
+                color: Colors.black12,
+                fontWeight: FontWeight.normal,
+                fontSize: 16,
               ),
             ),
+                Form(
+                    child: Column(
+                     children: [
+                       TextFormField(
+                      decoration: InputDecoration(
+                      border: UnderlineInputBorder(),
+                        labelText: 'Ml + 223 ',
+                         ),
+                         ),
+                     SizedBox(height: 15,),
 
-          ),
+                       ElevatedButton(
+                         style: ElevatedButton.styleFrom(
+                           shape: new RoundedRectangleBorder(),
+                           backgroundColor: Colors.black26,
+                         ),
+                         onPressed: () { },
+                         child: Text('Envoyer un code'),
+                       ),
 
-          //Saisis ton numéro de téléphone
-          Expanded(
-            child: SingleChildScrollView(
-
-              child: Container(
-                padding: const EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 10,),
-                    SizedBox(height: 10,),
-                    Form(
-                      child: Column(
-                        children: [
-
-                          TextFormField(
-                            decoration: InputDecoration(
-                              border: UnderlineInputBorder(),
-                              labelText: 'Ml + 223 ',
-                            ),
-                          ),
-                          SizedBox(height: 150,),
-
-                          ElevatedButton(
-                              onPressed:() {},
-                              style: ElevatedButton.styleFrom(
-                                shape: StadiumBorder(),
-                                backgroundColor: Colors.black12,
-                              ),
-                              child: Row(
-                                children: [
-                                  SizedBox(width: 20,),
-                                  Text('Envoyer un code',
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.belgrano(
-                                      color: Colors.black,
-                                      fontSize:18,
-                                    ),
-                                  ),
-                                ],
-                              )
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-
-                ),
-              ),
-            ),
-          ),
-        ],
+                   ],
+        ),
       ),
+      ],
+        ),
+    ),
     );
   }
 }

@@ -85,6 +85,17 @@ flutter:
    - assets/icones/home.png
    - assets/icones/per.png
    - assets/icones/tiktok.png
+   - assets/icones/ret.png
+   - assets/icones/que.png
+   - assets/icones/fac.png
+   - assets/icones/per.png
+   - assets/icones/tw.png
+   - assets/icones/gog.png
+   - assets/icones/send.png
+   - assets/icones/favo.png
+   - assets/icones/like.png
+   - assets/icones/com.png
+   - assets/icones/cherch.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

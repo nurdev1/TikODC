@@ -17,30 +17,14 @@ class CommentWidget extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(
             bottom: 8.0,),
-          child: ClipOval(
-            child: BackdropFilter(
-              filter: ImageFilter.blur(
-                sigmaX: 10.0,
-                sigmaY: 10.0,
-              ),
-              child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.1),
-                ),
-                child: Center(
-                  child: IconButton(
-                    onPressed: onPressed,
-                    icon: const Icon(
-                      Icons.comment,
-                      color: Colors.white,
-                      size:25.0,
-                    ),
-                  ),
+            child: Container(
+              child: Center(
+                child: IconButton(
+                  onPressed:(){},
+                  icon: Image.asset("assets/icones/com.png"),
                 ),
               ),
-            ),
-          ),
+            )
         ),
         Text(
           NumberFormat.compact().format(count),

@@ -30,6 +30,9 @@ class TikODC extends StatelessWidget {
               child: Column(
                 children: [
                   Text("TikODC",
+                    style: TextStyle(
+                      color:Colors.white
+                    ),
                   ),
                 ],
 

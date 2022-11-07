@@ -17,45 +17,28 @@ class SideBarCompnent
   Widget build(BuildContext context) {
     return Column(
       children:  [
-        Padding(
-          padding: EdgeInsets.only(
-          bottom: 20.0,
-        ),
-          child:  AvatarWidget(
-              profile: item['profile'],
-          ),
+        AvatarWidget(
+          profile: item['profile'],
         ),
 
-        Padding(padding: EdgeInsets.only(
-          bottom: 20.0,
+        LikeWidget(
+          count:item['likeCount'],
+          onPressed: () => print(""),
         ),
-          child: LikeWidget(
-            count:item['likeCount'],
-            onPressed: () => print(""),
+        CommentWidget(
+          count:item['likeComment'],
+          onPressed: ()  => print("comment"),
+        ),
+        FavoriteWidget(
+          count: item['favoCount'],
+          onPressed: () => print("favo"),
+        ),
+        ShareWidget(
+          count: item['sedCount'],
+          onPressed:() => print("send"),
+        ),
+         MusiqueWidget(
           ),
-        ),
-        Padding(padding: EdgeInsets.only(
-        ),
-          child: CommentWidget(
-            count:item['likeComment'],
-            onPressed: ()  => print("comment"),
-          ),
-        ),
-        Padding(padding: EdgeInsets.only(
-        ),
-          child: FavoriteWidget(
-          ),
-        ),
-        Padding(padding: EdgeInsets.only(
-        ),
-          child: ShareWidget(
-          ),
-        ),
-        Padding(padding: EdgeInsets.only(
-        ),
-          child: MusiqueWidget(
-          ),
-        ),
 
 
       ],
