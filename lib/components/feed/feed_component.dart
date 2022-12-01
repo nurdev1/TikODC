@@ -18,16 +18,16 @@ class FeedComponent extends StatelessWidget {
         VideoComponentPlayer(media:item['media'],
         ),
         Positioned(
-          bottom: 100.0,
+          bottom: 120.0,
             left: 20.0,
             right: 100.0,
             child: ProfileComponent(item:item),
         ),
         Positioned(
           bottom: 100.0,
-          //left: 20.0,
           right: 20.0,
-          child: SideBarCompnent(item:item),
+          child: SideBarCompnent(
+              item:item),
         ),
         EnteteWidget()
       ],

@@ -17,6 +17,7 @@ class VideoComponentPlayer extends StatefulWidget {
 
 class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
   late VideoPlayerController _controller;
+  double _position = 0.0;
 
   @override
   void initState() {
@@ -27,7 +28,7 @@ class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
     )..initialize().then((_) {
         setState(() {});
 
-      // _controller.play();
+    //   _controller.play();
       });
 
     _controller.setLooping(true);
@@ -47,16 +48,22 @@ class _VideoComponentPlayerState extends State<VideoComponentPlayer> {
                 child: VideoPlayer(_controller),
               )
             : Container(),
-        const Positioned(
+         Positioned(
             bottom: 70.0,
             left: 0.0,
             right: 0.0,
-            child: VideoPlayerProgressComponent(progress: .2,
-            //controller.seekTo(Duration(
-              //                 milliseconds:
-              //               (_controller.value.duration.inMilliseconds * position).toInt()));
-            ),
+            child: VideoPlayerProgressComponent(progress:_position,
+            onTap: (position) {
+                    _controller.seekTo(Duration(
+                    milliseconds:
+                  (_controller.value.duration.inMilliseconds * position).toInt()));
+
+                    setState(() => {
+                      _position = position
+                    });
+            }
         ),
+    ),
       ],
     );
   }

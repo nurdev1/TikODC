@@ -17,7 +17,7 @@ class LikeWidget extends StatelessWidget {
      Container(
        child: IconButton(
          onPressed:onPressed,
-         icon: Image.asset("assets/icones/like.png",width: 40,),
+         icon: Image.asset("assets/icones/like.png",width: 80,height: 80,),
        ),
      ),
          Text(

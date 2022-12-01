@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class VideoPlayerProgressComponent extends StatelessWidget {
 
   final progress;
-  final Function(double Position)? onTap;
+  final Function(double position)? onTap;
 
   const VideoPlayerProgressComponent(
       {Key? key, this.progress = 0, this.onTap,})
@@ -30,7 +30,7 @@ class VideoPlayerProgressComponent extends StatelessWidget {
                 height: 2,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white54,
                 ),
               ),
               Container(
@@ -40,7 +40,7 @@ class VideoPlayerProgressComponent extends StatelessWidget {
                     .size
                     .width * progress,
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.white10,
                 ),
               ),
             ]

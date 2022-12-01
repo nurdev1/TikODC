@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tikodc/tikodc/Inscription.dart';
 
-import 'AnimationPage.dart';
 
 class Connexion extends StatelessWidget {
   const Connexion({Key? key}) : super(key: key);
@@ -33,7 +32,6 @@ class Connexion extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-            SizedBox(height: 5,),
 
               Text("Gère ton compte, consulte les notifications, commente des vidéo et bien plus encore",
                 textAlign: TextAlign.center,
@@ -42,7 +40,6 @@ class Connexion extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
@@ -56,7 +53,6 @@ class Connexion extends StatelessWidget {
                       IconButton(onPressed: (){},
                         icon: Image.asset("assets/icones/per.png",color: Colors.black,),
                       ),
-                      SizedBox(width: 5,),
                       Text('Utiliser téléphone/e-mail/nom d’utilisateur'
                         ,style: TextStyle(
                         color: Colors.black,
@@ -69,7 +65,6 @@ class Connexion extends StatelessWidget {
                   )
               ),
             ),
-            SizedBox(height: 5,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
@@ -84,13 +79,11 @@ class Connexion extends StatelessWidget {
                       IconButton(onPressed: (){},
                           icon: Image.asset("assets/icones/fac.png"),
                       ),
-                      SizedBox(width: 30,),
                       Text('Continuer avec Facebook',style: TextStyle(
                         color: Colors.black,
                         fontSize: 13,
                       ),
                       ),
-                      SizedBox(height: 10,),
                     ],
                   )
               ),
@@ -109,7 +102,6 @@ class Connexion extends StatelessWidget {
                       IconButton(onPressed: (){},
                         icon: Image.asset("assets/icones/gog.png"),
                       ),
-                      SizedBox(width: 30,),
                       Text('Continuer avec gmail',style: TextStyle(
                         color: Colors.black,
                         fontSize: 13,
@@ -119,7 +111,6 @@ class Connexion extends StatelessWidget {
                   )
               ),
             ),
-            SizedBox(height: 5,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
@@ -134,7 +125,6 @@ class Connexion extends StatelessWidget {
                       IconButton(onPressed: (){},
                         icon: Image.asset("assets/icones/tw.png"),
                       ),
-                      SizedBox(width: 30,),
                       Text('Continuer avec  Twitter',style: TextStyle(
                         color: Colors.black,
                         fontSize: 13,
@@ -144,7 +134,6 @@ class Connexion extends StatelessWidget {
                   )
               ),
             ),
-            SizedBox(height: 5,),
             Column(
               children: [
                 Padding(
@@ -152,30 +141,36 @@ class Connexion extends StatelessWidget {
                   child: Text("En continuant, tu acceptes les conditions d’utilisation et reconnais avoir et lu"
                       " la politique de confidialité pour savoir comment nous collectons, utilisons et partageons tes données.",
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.roboto(
+                    style: GoogleFonts.alef(
                       color: Colors.black26,
                       fontSize: 13,
                     ),
                   ),
                 ),
                 Container(
+                  color: Colors.brown.shade50,
+                  height: 36,
                   child: Row(
-
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Tu n’as pas de compte ?",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.lato(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 17,
                         ),
                       ),
-                      SizedBox(width: 10,),
-                      Text("Inscription",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.lato(
-                          color: Colors.red,
-                          fontSize:18,
+                      GestureDetector(
+                        onTap:  (){
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context)=> Inscription()));
+                        },
+                        child: Text("Inscription",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.lato(
+                            color: Colors.red,
+                            fontSize:17,
+                          ),
                         ),
                       ),
                     ],

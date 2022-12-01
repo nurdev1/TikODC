@@ -1,6 +1,9 @@
+import 'dart:collection';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tikodc/components/feed/feed_component.dart';
+import 'package:tikodc/tikodc/Inscription.dart';
 
 
 const List<Map<String, dynamic>> data = [
@@ -54,63 +57,135 @@ const List<Map<String, dynamic>> data = [
     "favoCount":664,
   }
 ];
+/*class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int _selectedIndex = 0;
+  void _onSelect(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+  final List<Widget> _pages = [
+    Home(),
+    Inscription(),
+    Inscription(),
+    Inscription(),
+    Inscription(),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBody: true,
+      body: //_pages[_selectedIndex],
+      PageView (
+        scrollDirection: Axis.vertical,
+        children: data.map((item){
+          return FeedComponent(item:item,
+          );
+        }).toList(),
+      ),
+      *//*currentIndex: 2,
+            onTap: ((value) {
+            print(value);
+            },*//*
+
+      bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.black,
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.grey,
+          items:  <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Image.asset('assets/icones/home.png',
+                width:70, height:35.95),
+              label: "Accueil",
+            ),
+            BottomNavigationBarItem( icon: Image.asset('assets/icones/now.png',
+              width:70, height:35.95,
+            ),
+              label: 'Add',
+            ),
+            BottomNavigationBarItem(icon: Image.asset('assets/icones/add.png',
+              width:70, height:35.95, ),
+              label: "",
+            ),
+            BottomNavigationBarItem(icon: Image.asset('assets/icones/mess.png',
+              width:50, height:35.95,),
+              label: "Boite de réception",
+            ),
+            BottomNavigationBarItem(icon: Image.asset('assets/icones/per.png',
+              width:50, height:35.95, ),
+              label: "Profil",
+            ),
+
+          ]
+
+      ),
+    );
+  }
+}*/
+
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+   Home({Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-        body: PageView (
-        scrollDirection: Axis.vertical,
-        children: data.map((item){
-        return FeedComponent(item:item,
-        );
-      }).toList(),
+        body:
+        PageView (
+          scrollDirection: Axis.vertical,
+          children: data.map((item){
+            return FeedComponent(item:item,
+            );
+          }).toList(),
     ),
-        /*currentIndex: 2,
-            onTap: ((value) {
-            print(value);
-            },*/
 
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.black,
-          elevation: 0,
-         unselectedItemColor: Colors.blue,
-         selectedItemColor: Colors.black87,
-         // showSelectedLabels: false,
-         // showUnselectedLabels: false,
-          items:  [
-          BottomNavigationBarItem(icon: Image.asset('assets/icones/home.png',
-            width:27.52, height:35.95, color: Colors.blue,),
-          label: "Accueil",
-          ),
-            BottomNavigationBarItem( icon: Image.asset('assets/icones/now.png',
-                width:27.52, height:35.95, color: Colors.black,
+          bottomNavigationBar: BottomNavigationBar(
+            backgroundColor: Colors.black,
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.grey,
+            items:  <BottomNavigationBarItem>[
+              BottomNavigationBarItem(icon: Image.asset('assets/icones/home.png',
+                width:70, height:35.95),
+                label: "Accueil",
               ),
-              label: 'Add',
-            ),
-        BottomNavigationBarItem(icon: Image.asset('assets/icones/add.png',
-          width:27.52, height:35.95, color: Colors.black,),
-          label: "add",
-          ),
-         BottomNavigationBarItem(icon: Image.asset('assets/icones/mess.png',
-           width:27.52, height:35.95, color: Colors.black,),
-         label: "Boite de réception",
-           ),
-        BottomNavigationBarItem(icon: Image.asset('assets/icones/per.png',
-          width:27.52, height:35.95, color: Colors.blue,),
-        label: "Profil",
-          ),
+              BottomNavigationBarItem( icon: Image.asset('assets/icones/now.png',
+                width:70, height:35.95,
+              ),
+                label: 'Add',
+              ),
+              BottomNavigationBarItem(icon: Image.asset('assets/icones/add.png',
+                width:70, height:35.95, ),
+                label: "",
+              ),
+              BottomNavigationBarItem(icon: Image.asset('assets/icones/mess.png',
+                width:50, height:35.95,),
+                label: "Boite de réception",
+              ),
+              BottomNavigationBarItem(icon: Image.asset('assets/icones/per.png',
+                width:50, height:35.95, ),
+                label: "Profil",
+              ),
 
-    ],
-    )
+            ]
+
+          ),
           );
   }
 
 
 
 }
+
 
 
